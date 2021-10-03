@@ -1,0 +1,574 @@
+{
+	"info": {
+		"_postman_id": "c08370f5-68ed-4eb7-a85d-faf31b828112",
+		"name": "Disney World",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "auth/register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"user1@123.com\",\r\n    \"password\":\"password\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "{{Ruta}}/auth/register",
+							"host": [
+								"{{Ruta}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "auth/login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"user1@123.com\",\r\n    \"password\":\"password\"\r\n}"
+						},
+						"url": {
+							"raw": "{{Ruta}}/auth/login",
+							"host": [
+								"{{Ruta}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "characters",
+			"item": [
+				{
+					"name": "/characters",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjMzMTY2NDU4LCJleHAiOjE2MzMyNTI4NTh9.8Kl4pYJORQ3vuyyGcpNHYqXJB_SZCV5xrOhn9IxUeqs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{Ruta}}/characters",
+							"host": [
+								"{{Ruta}}"
+							],
+							"path": [
+								"characters"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/characters/:id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjMzMTY2NDU4LCJleHAiOjE2MzMyNTI4NTh9.8Kl4pYJORQ3vuyyGcpNHYqXJB_SZCV5xrOhn9IxUeqs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{Ruta}}/characters/:id",
+							"host": [
+								"{{Ruta}}"
+							],
+							"path": [
+								"characters",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/characters/search/n?name=",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjMzMTY2NDU4LCJleHAiOjE2MzMyNTI4NTh9.8Kl4pYJORQ3vuyyGcpNHYqXJB_SZCV5xrOhn9IxUeqs"
+							}
+						],
+						"url": {
+							"raw": "{{Ruta}}/characters/search/n?name=ironman",
+							"host": [
+								"{{Ruta}}"
+							],
+							"path": [
+								"characters",
+								"search",
+								"n"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "ironman"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/characters/search/a?age=",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjMzMTY2NDU4LCJleHAiOjE2MzMyNTI4NTh9.8Kl4pYJORQ3vuyyGcpNHYqXJB_SZCV5xrOhn9IxUeqs"
+							}
+						],
+						"url": {
+							"raw": "{{Ruta}}/characters/search/a?age=40",
+							"host": [
+								"{{Ruta}}"
+							],
+							"path": [
+								"characters",
+								"search",
+								"a"
+							],
+							"query": [
+								{
+									"key": "age",
+									"value": "40"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/characters/search/m?movie=",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjMzMTY2NDU4LCJleHAiOjE2MzMyNTI4NTh9.8Kl4pYJORQ3vuyyGcpNHYqXJB_SZCV5xrOhn9IxUeqs"
+							}
+						],
+						"url": {
+							"raw": "{{Ruta}}/characters/search/m?movie=1",
+							"host": [
+								"{{Ruta}}"
+							],
+							"path": [
+								"characters",
+								"search",
+								"m"
+							],
+							"query": [
+								{
+									"key": "movie",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/characters",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjMzMTIyNjA0LCJleHAiOjE2MzMyMDkwMDR9.5dYBHvDVxZGassVJ1V5Vu5pM-lbw9VFkZlDUC6zITk8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"ironman2\",\r\n    \"age\": 40,\r\n    \"weight\": 102,\r\n    \"history\":\"an avengers\",\r\n    \"image\":\"hhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQqFwB6I0wEPniOPZpaYCDS17m-fWAhHRdfA&usqp=CAU\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "{{Ruta}}/characters",
+							"host": [
+								"{{Ruta}}"
+							],
+							"path": [
+								"characters"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/characters/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjMzMTY2NDU4LCJleHAiOjE2MzMyNTI4NTh9.8Kl4pYJORQ3vuyyGcpNHYqXJB_SZCV5xrOhn9IxUeqs"
+							}
+						],
+						"url": {
+							"raw": "{{Ruta}}/characters/:id",
+							"host": [
+								"{{Ruta}}"
+							],
+							"path": [
+								"characters",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/characters/:id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjMzMTY2NDU4LCJleHAiOjE2MzMyNTI4NTh9.8Kl4pYJORQ3vuyyGcpNHYqXJB_SZCV5xrOhn9IxUeqs"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"ironman\",\r\n    \"age\":\"50\",\r\n    \"weight\":\"102\",\r\n    \"history\":\"an avengers how save the world\",\r\n    \"image\":\"hhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQqFwB6I0wEPniOPZpaYCDS17m-fWAhHRdfA&usqp=CAU\"\r\n}"
+						},
+						"url": {
+							"raw": "{{Ruta}}/characters/:id",
+							"host": [
+								"{{Ruta}}"
+							],
+							"path": [
+								"characters",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "movies",
+			"item": [
+				{
+					"name": "/movies",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjMzMTY2NDU4LCJleHAiOjE2MzMyNTI4NTh9.8Kl4pYJORQ3vuyyGcpNHYqXJB_SZCV5xrOhn9IxUeqs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"avengers age of ultron\",\r\n    \"release_date\": \"2021-12-12\",\r\n    \"qualification\": 5,\r\n    \"image\":\"img.jpg\",\r\n    \"id_characters\": \"1\",\r\n    \"id_genres\": \"1,2\"\r\n}"
+						},
+						"url": {
+							"raw": "{{Ruta}}/movies",
+							"host": [
+								"{{Ruta}}"
+							],
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/movies/:id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjMzMTY2NDU4LCJleHAiOjE2MzMyNTI4NTh9.8Kl4pYJORQ3vuyyGcpNHYqXJB_SZCV5xrOhn9IxUeqs"
+							}
+						],
+						"url": {
+							"raw": "{{Ruta}}/movies/:id",
+							"host": [
+								"{{Ruta}}"
+							],
+							"path": [
+								"movies",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/movies/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjMzMTY2NDU4LCJleHAiOjE2MzMyNTI4NTh9.8Kl4pYJORQ3vuyyGcpNHYqXJB_SZCV5xrOhn9IxUeqs"
+							}
+						],
+						"url": {
+							"raw": "{{Ruta}}/movies/:id",
+							"host": [
+								"{{Ruta}}"
+							],
+							"path": [
+								"movies",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/movies/:id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjMzMTY2NDU4LCJleHAiOjE2MzMyNTI4NTh9.8Kl4pYJORQ3vuyyGcpNHYqXJB_SZCV5xrOhn9IxUeqs"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"avengers infinity war\",\r\n    \"release_date\": \"2012-03-12\",\r\n    \"qualification\": 5,\r\n    \"image\":\"img.jpg\"\r\n}"
+						},
+						"url": {
+							"raw": "{{Ruta}}/movies/:id",
+							"host": [
+								"{{Ruta}}"
+							],
+							"path": [
+								"movies",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/movies",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjMzMTY2NDU4LCJleHAiOjE2MzMyNTI4NTh9.8Kl4pYJORQ3vuyyGcpNHYqXJB_SZCV5xrOhn9IxUeqs"
+							}
+						],
+						"url": {
+							"raw": "{{Ruta}}/movies",
+							"host": [
+								"{{Ruta}}"
+							],
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/movies/search/n?name=",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjMzMTY2NDU4LCJleHAiOjE2MzMyNTI4NTh9.8Kl4pYJORQ3vuyyGcpNHYqXJB_SZCV5xrOhn9IxUeqs"
+							}
+						],
+						"url": {
+							"raw": "{{Ruta}}/movies/search/n?name=avengers infinity war",
+							"host": [
+								"{{Ruta}}"
+							],
+							"path": [
+								"movies",
+								"search",
+								"n"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "avengers infinity war"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/movies/search/g?genre=",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjMzMTY2NDU4LCJleHAiOjE2MzMyNTI4NTh9.8Kl4pYJORQ3vuyyGcpNHYqXJB_SZCV5xrOhn9IxUeqs"
+							}
+						],
+						"url": {
+							"raw": "{{Ruta}}/movies/search/g?genre=2",
+							"host": [
+								"{{Ruta}}"
+							],
+							"path": [
+								"movies",
+								"search",
+								"g"
+							],
+							"query": [
+								{
+									"key": "genre",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/movies/search/o?order=",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjMzMTY2NDU4LCJleHAiOjE2MzMyNTI4NTh9.8Kl4pYJORQ3vuyyGcpNHYqXJB_SZCV5xrOhn9IxUeqs"
+							}
+						],
+						"url": {
+							"raw": "{{Ruta}}/movies/search/o?order=ASC",
+							"host": [
+								"{{Ruta}}"
+							],
+							"path": [
+								"movies",
+								"search",
+								"o"
+							],
+							"query": [
+								{
+									"key": "order",
+									"value": "ASC"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
