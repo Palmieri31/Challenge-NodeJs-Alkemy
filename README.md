@@ -8,5 +8,3 @@ npm install
 # run server
 
 npm run dev
-
-img
